@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Press Me</button>
+
+    <script>
+        const string = ' The revolution will not be televised.';
+        console.log(string);
+        const badString = string;
+        console.log(badString);
+        const sgl = ' Single quotes';
+        const dbl = " Double quotes";
+        console.log(sgl);
+        console.log(dbl);
+
+        const sglDbl = ' Would you eat a "fish supper"? ';
+        const dblSgl = "I'm feeling blue.";
+        console.log(sglDbl);
+        console.log(dblSgl);
+        const bigmouth = 'I\'ve got no right to take my place..'
+        console.log(bigmouth);
+        /* const name = 'Chris';
+         const greeting = `Hello, ${name}`;
+         console.log(greeting);*/
+
+        const one = 'Hello';
+        const two = ' How are you ?';
+        const joined = `${one}, ${two}`;
+        console.log(joined);
+
+        const button = document.querySelector('button');
+        console.log(button);
+        function greet() {
+            const name = prompt('What is your name ?');
+            alert(`Hello ${name}, nice see to you !`);
+        }
+        button.addEventListener('click', greet);
+
+        const greeting = "Hello";
+        const name = "Chris";
+        console.log(greeting + "," + name);
+        console.log(`${greeting},${name}`);
+
+        const Name = "Front";
+        const number = "142";
+        console.log(`${Name},${number}`);
+
+        const myString = '123';
+        const myNum = Number(myString);
+        console.log(typeof myNum);
+        /* Number sayıya dönüştürür*/
+        const myNum2 = 123;
+        const myString2 = myNum2.toString();
+        console.log(typeof myString2);
+        /* tostring stringe dönüştürür*/
+
+        const song = "Fight the Youth";
+        const score = 9;
+        const highscore = 10;
+        const output = ` I like song ${song}. I gave it a score of   ${score / highscore * 100}%.`
+        console.log(output);
+
+        const output1 = `I like song.
+        I gave it a score of %90.`
+        console.log(output1);
+
+        const output2 = `I like song \nI gave it a score of 90%.`;
+        console.log(output2);
+
+        let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = txt.length;
+        console.log(txt.length);
+        /*uzunluk*/
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(7, 13);
+        console.log(part);
+        /*başlangıç ve bitiş noktası seçme*/
+
+        let rts = "Apple, Banana, Kiwi";
+        let part1 = rts.slice(-12, -6);
+        console.log(part1);
+        /*başlangıç ve bitiş noktası seçme*/
+        let part2 = str.slice(7);
+        console.log(part2);
+        /*bitiş/başlangıç noktası seçme */
+        let part3 = str.slice(-12);
+        console.log(part3);
+        let str1 = "Apple, Banana, Kiwi";
+        let part4 = str.substring(7, 13);
+        console.log(part4);
+        /* slice ve substring aynı fakat başlangıç noktası 0 dan az olsa bile başlangıç noktasını 0 kabul eder*/
+        let Str = "Apple, Banana, Kiwi";
+        let Part = str.substr(7, 6);
+        console.log(Part);
+        /* substr nin slice den Fark, ikinci parametrenin çıkarılan parçanın uzunluğunu belirtmesidir.*/
+        let Part1 = str.substr(7);
+        console.log(Part1);
+        /*İkinci parametreyi atlarsanız, substr() dizenin geri kalanını keser.*/
+        let Part2 = str.substr(-4);
+        console.log(Part2);
+        /*İlk parametre negatifse, konum dizenin sonundan itibaren sayılır.*/
+        /*slice(start, end)
+         substring(start, end)
+         substr(start, length)*/
+        let Text = "Please visit Microsoft!";
+        let newText6 = Text.replace("Microsoft", "W3Schools");
+        console.log(newText6);
+        /*replace() yöntemi, bir dizede belirtilen bir değeri başka bir değerle değiştirir.*/
+        let text4 = "Please visit Microsoft!";
+        let newText1 = text4.replace(/MICROSOFT/i, "W3Schools");
+        console.log(newText1);
+        /* büyük harfe duyarlı halde replace() kullanmak için /../i tagini kullanmamız gerekiyor.*/
+        let text5 = "Please visit Microsoft and Microsoft!";
+        let newText = text5.replace(/Microsoft/g, "W3Schools");
+        /* birden fazla aynı kelime için replace() kullanmak için /.../g tagini kullanmamız gerekiyor.*/
+        let other = "Hello World!";
+        let other2 = other.toUpperCase();
+        console.log(other2);
+        let other4 = "HELLO BITCH!";
+        let other5 = other4.toLowerCase();
+        console.log(other5);
+
+        /*concat( ) + yerine kullanılabilir.*/
+        let text11 = "Hello";
+        let text21 = "World";
+        let text31 = text11.concat(" ", text21);
+        console.log(text31);
+        text22 = "Hello" + " " + "World!";
+        text33 = "Hello".concat(" ", "World!");
+        /*yukardaki satırlar aynı */
+
+
+        let text111 = "      Hello World!      ";
+        let text211 = text111.trim();
+        console.log(text211);
+        /* trim() sag ve soldaki boşlukları siler*/
+
+
+        let text555 = "5";
+        let padded = text555.padStart(4, "x");
+        console.log(padded);
+        let text666 = "5";
+        let padded2 = text666.padStart(4, "0");
+        console.log(padded2);
+        /*padStart() yöntemi, bir dizenin başlangıcını başka bir dizeyle doldurur:*/
+        let numb5555 = 5;
+        let text777 = numb5555.toString();
+        let padded7 = text777.padStart(4, "0");
+        console.log(padded7);
+        /* padstart string metodudur , yukarıda number olan bir değişkeni sayıya çevirdik*/
+
+        let text0 = "5";
+        let padded0 = text0.padEnd(4, "x");
+        console.log(padded0);
+        /* padEnd( ) bir dizenin sonunu başka bir dize ile doldurur string metodudur*/
+
+        let text00 = "HELLO WORLD";
+        let char = text00.charAt(0);
+        console.log(char);
+        /*charAt() yöntemi, bir dizgede belirtilen bir dizindeki (konumdaki) karakteri döndürür:*/
+
+        let text01 = "HELLO WORLD";
+        let char01 = text01.charCodeAt(0);
+        console.log(char01);
+        /*charCodeAt() yöntemi, bir dizgede belirtilen dizindeki karakterin unicode'unu döndürür:
+        Yöntem, bir UTF-16 kodu (0 ile 65535 arasında bir tam sayı) döndürür.*/
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
